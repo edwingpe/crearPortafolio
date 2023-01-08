@@ -1,0 +1,14 @@
+.form-control{
+    border: 0px;
+    border-radius: 0%;
+    border-bottom: 1px solid; 
+}
+
+.error-container{
+    color: #808080;
+}
+
+.ng-touched .ng-invalid:is(input, textarea),
+.ng-dirty .ng-invalid:is(input,textarea){
+    outline: 2px solid red;
+}

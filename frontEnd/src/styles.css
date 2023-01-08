@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:wght@400;500;600&display=swap');
+
+.btn-edit{
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    border: 0;
+    color: white;
+    background:#f8cc62;
+}
+
+/*  font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Poppins', sans-serif; */
+
+*{
+    box-sizing: border-box;
+    margin-top: 0;
+    padding: 0;
+}
+
+html {
+    scroll-padding-top: 70px;
+}
+
+.modal-body label{
+    color: #808080;
+}
+
+.modal-header,
+.modal-footer{
+    border: 0;
+}
+
+.modal-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem;
+    color: #696969;
+}
+
+.modal-info {
+    font-family: 'Poppins', sans-serif;
+    font-weight:lighter;
+    color: #808080;
+}
+
+.btn-login{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    background: #696969;
+    border-radius:20px;
+    border: 0;
+    padding: 8px 20px;
+}
+
+.btn-login:hover{
+    color:#fee2a8;
+}
+
+.btn-edit:hover{
+    background:#d586b0;
+}
+
+.section-title{
+    font-family: 'Poppins',sans-serif;
+    font-size: 5em;
+    font-weight: bold;
+    color: #a4c4b5;
+}
+
+@media (max-width:575.98px){
+    .section-title{
+        font-size: 3.4rem;
+    }
+}

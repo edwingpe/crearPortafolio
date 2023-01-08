@@ -1,0 +1,53 @@
+<div class="modal fade" tabindex="-1" id="loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="formLogin" (ngSubmit)="onEnviar($event)">
+                <div class="modal-body m-0 p-0">
+                    <div class="container-fluid">
+                        <div class="modal-header">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+    
+                        <div class="row justify-content-center text-center">
+                            <div class="col-12 w-75">
+                                <h1 class="modal-title">¡Hola! :)</h1>
+                                <h2 class="modal-info">Para estar conectados, logueate utilizando tu e-mail y contraseña.</h2>
+                            </div>
+                        </div>
+    
+                        <div class="row justify-content-center gy-3">
+                            <div class="col-12 w-75">
+                                <div class="form-floating mb-3">
+                                    <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com" autocomplete="off">
+                                    <label for="floatingInput">Email address</label>
+                                </div>
+                                <!-- Comprobacion de validez. Usamos el Getter creado en el .ts -->
+                                <div class="error-container" *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
+                                    <p class="error-msg" *ngIf="emailControl.hasError('required')">El campo es obligatorio</p>
+                                    <p class="error-msg" *ngIf="emailControl.hasError('email')">Ingrese un email valido</p>
+                                </div>      
+                            </div>
+                            <div class="col-12 w-75">
+                                <div class="form-floating">
+                                    <input type="password" class="form-control" formControlName="password" id="floatingPassword" placeholder="Password" autocomplete="off">
+                                    <label for="floatingPassword">Password</label>
+                                </div>
+                                <div class="error-container" *ngIf="passwordControl.invalid && (passwordControl.touched || passwordControl.dirty)">
+                                    <p class="error-container" *ngIf="passwordControl.hasError('required')">El campo es obligatorio</p>                                    
+                                </div>
+                            </div>      
+                        </div>
+                
+                
+                        <div class="row py-5 justify-content-center">
+                            <div class="col-auto">
+                                <button type="submit" [disabled]="formLogin.invalid" class="btn-login" data-bs-dismiss="modal">iniciar sesion</button>  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
+
