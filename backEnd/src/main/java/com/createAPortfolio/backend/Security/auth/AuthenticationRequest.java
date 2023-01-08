@@ -1,4 +1,4 @@
-package com.jwtProject.demo.Security.auth;
+package com.createAPortfolio.backend.Security.auth;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.jwtProject.demo.Security.auth;
+package com.createAPortfolio.backend.Security.auth;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -16,7 +16,7 @@ public class AuthenticationController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthenticationResponse> register(
-            @RequestBody ResgisterRequest request
+            @RequestBody RegisterRequest request
     ) {
         return ResponseEntity.ok(service.register(request));
     }

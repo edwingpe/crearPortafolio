@@ -1,6 +1,6 @@
-package com.jwtProject.demo.Security.Config;
+package com.createAPortfolio.backend.Security.Config;
 
-import com.jwtProject.demo.Security.Usuario.UsuarioRepository;
+import com.createAPortfolio.backend.Security.Usuario.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,8 +22,10 @@ public class ApplicationConfig {
 
     @Bean
     public UserDetailsService userDetailsService() {
-        return username -> repository.findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User Not Found"));
+        return username -> {
+            return repository.findByEmail(username)
+                    .orElseThrow(() -> new UsernameNotFoundException("User Not Found"));
+        };
     }
 
     @Bean

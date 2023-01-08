@@ -1,4 +1,4 @@
-package com.jwtProject.demo.Security.Config;
+package com.createAPortfolio.backend.Security.Config;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,5 +1,6 @@
-package com.jwtProject.demo.Security.auth;
+package com.createAPortfolio.backend.Security.auth;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -9,8 +10,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ResgisterRequest {
-
+public class RegisterRequest {
+    @NotNull
     private String firstname;
     private String lastname;
     private String email;

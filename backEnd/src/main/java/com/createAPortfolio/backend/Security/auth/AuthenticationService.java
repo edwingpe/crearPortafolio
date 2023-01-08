@@ -1,9 +1,9 @@
-package com.jwtProject.demo.Security.auth;
+package com.createAPortfolio.backend.Security.auth;
+import com.createAPortfolio.backend.Security.Config.JwtService;
 
-import com.jwtProject.demo.Security.Config.JwtService;
-import com.jwtProject.demo.Security.Usuario.Rol;
-import com.jwtProject.demo.Security.Usuario.Usuario;
-import com.jwtProject.demo.Security.Usuario.UsuarioRepository;
+import com.createAPortfolio.backend.Security.Usuario.Rol;
+import com.createAPortfolio.backend.Security.Usuario.Usuario;
+import com.createAPortfolio.backend.Security.Usuario.UsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,7 +19,7 @@ public class AuthenticationService {
 
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationResponse register(ResgisterRequest request) {
+    public AuthenticationResponse register(RegisterRequest request) {
         var user = Usuario.builder()
                 .nombre(request.getFirstname())
                 .apellido(request.getLastname())

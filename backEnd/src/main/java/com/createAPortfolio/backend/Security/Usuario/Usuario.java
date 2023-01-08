@@ -1,11 +1,6 @@
-package com.jwtProject.demo.Security.Usuario;
+package com.createAPortfolio.backend.Security.Usuario;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,7 +9,9 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 @Data
 @Builder
@@ -24,14 +21,16 @@ import java.util.List;
 @Table(name = "_user")
 public class Usuario implements UserDetails {
     @Id
-    @GeneratedValue()
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nombre;
     private String apellido;
     private String email;
     private String password;
+
     @Enumerated(EnumType.STRING)
     private Rol rol;
+
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

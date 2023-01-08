@@ -1,4 +1,4 @@
-package com.jwtProject.demo.Security.Usuario;
+package com.createAPortfolio.backend.Security.Usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;

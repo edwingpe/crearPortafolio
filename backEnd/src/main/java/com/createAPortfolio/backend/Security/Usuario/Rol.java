@@ -1,6 +1,8 @@
-package com.jwtProject.demo.Security.Usuario;
+package com.createAPortfolio.backend.Security.Usuario;
 
 public enum Rol {
     USER,
     ADMIN
 }
+
+
