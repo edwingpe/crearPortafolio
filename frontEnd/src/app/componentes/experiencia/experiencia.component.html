@@ -1,0 +1,118 @@
+<section class="experience-section" id="experience">
+    <div class="container-lg min-vh-100 py-5">
+        <div class="row align-items-center">
+            <div class="col-auto p-0">
+                <h1 class="section-title p-0 m-0">Experiencia</h1>
+            </div>
+            <div class="col-auto ms-auto p-0">
+                <button (click)="mostrarOcultar()" type="button" class="btn-edit"><i class={{icono}}></i></button>
+    
+            </div>
+        </div>
+
+        <!---------------------------- Inicio form Agregar Experiencia ------------------>
+        
+        <div *ngIf="mostrar" class="row ">
+            <div class="col-lg-8">
+                <form class="row g-3 border rounded-2 pb-4 my-5 mx-0">
+                    <div class="col-lg-7">
+                        <label for="input-nombre-empresa" class="form-label">Nombre de empresa:</label>
+                        <input type="text" class="form-control" id="input-nombre-empresa">
+                    </div>
+                    
+                    <div class="col-auto">
+                        <label for="input-date-empresa-in" class="form-label">Ingreso:</label>
+                        <input type="date" class="form-control" style="width: 150px;" id="input-date-empresa-in">
+                    </div>
+
+                    <div class="col-auto">
+                        <label for="input-date-empresa-out" class="form-label">Egreso:</label>
+                        <input type="date" class="form-control" style="width: 150px;" id="input-date-empresa-out">
+                    </div>
+
+                    <div class="col-lg-6">
+                        <label for="input-puesto" class="form-label">Cargo:</label>
+                        <input type="text" class="form-control" id="input-puesto">
+                    </div>
+
+                    <div class="col-lg-12">
+                        <label for="input-puesto" class="form-label">Descripción de actividades:</label>
+                        <input type="text" class="form-control" id="input-puesto" maxlength="100">
+                    </div>
+                    
+                    <div class="row pt-4 justify-content-center">
+                        <div class="col-auto">
+                            <button type="button" class="btn-login">guardar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="col-lg-4 border rounded-2 py-4 my-5 mx-0 text-center justify-content-center">
+                <p class="exp-info-title">¡Hey! :)</p> 
+                <p class="exp-info">Completa los datos solicitados para agregar una nueva experiencia laboral.</p> 
+            </div>
+        </div>
+        
+
+        <!---------------------------- Final form Agregar Experiencia ------------------>
+
+        <div class="row row-cols-1 row-cols-md-3 g-3 my-5">
+            <div class="col" *ngFor="let estudito of estudiositos">
+              <div class="card">
+                <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
+                <div class="card-body">
+                    <h5 class="card-title">{{estudito.institucion}}</h5>
+                    <p class="card-text lh-sm">
+                        <br>¡Hola
+                        <br> hey
+                        <br> aja
+                    </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- <div class="col">
+                <div class="card">
+                  <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
+                  <div class="card-body">
+                      <h5 class="card-title">Nombre Empresa.</h5>
+                      <p class="card-text lh-sm">
+                          <br> Titulo del puesto.
+                          <br> Periodo.
+                          <br> Descripcion de las actividades
+                      </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
+                  <div class="card-body">
+                      <h5 class="card-title">Nombre Empresa.</h5>
+                      <p class="card-text lh-sm">
+                          <br> Titulo del puesto.
+                          <br> Periodo.
+                          <br> Descripcion de las actividades
+                      </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col">
+                <div class="card">
+                  <img src="/assets/img/card-image-noFound.png" class="card-img-top" alt="Logo-empresa">
+                  <div class="card-body">
+                      <h5 class="card-title">Nombre Empresa.</h5>
+                      <p class="card-text lh-sm">
+                          <br> Titulo del puesto.
+                          <br> Periodo.
+                          <br> Descripcion de las actividades
+                      </p>
+                  </div>
+                </div>
+              </div> -->
+        </div>
+    </div>
+</section>

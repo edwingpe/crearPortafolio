@@ -1,0 +1,15 @@
+section.experience-section{
+    border-left: 20px solid #ffe4a9;
+}
+
+.exp-info{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #808080;
+}
+
+.exp-info-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #696969;
+}

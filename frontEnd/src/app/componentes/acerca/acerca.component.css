@@ -1,0 +1,25 @@
+section.about-section{
+    border-left: 20px solid #a4c4b5;
+   
+}
+
+.about-title,
+.experience-title{
+    font-family: 'Poppins',sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
+    color: #a4c4b5;
+}
+
+.about-title span{
+    font-weight: lighter;
+    font-size: 4rem;
+}
+
+.about-text{
+    font-family: 'Poppins', sans-serif; 
+} 
+
+.border-dashed{
+    border: 5px dashed #696969 !important;  
+}

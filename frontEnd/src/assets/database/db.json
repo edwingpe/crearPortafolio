@@ -1,0 +1,27 @@
+{
+    "nombre": "Edwin",
+    "apellido": "Perez",
+    "edad":31,
+
+    "estudios":[
+        {
+            "id":"1",
+            "titulo":"secundario",
+            "institucion":"ITJO-Jesus Obrero",
+            "inicio":"12-12-1810",
+            "fin":"01-02-2010",
+            "descripcion":"Loren loren impusn",
+            "imagen":"../assets/img/ap-log.png"
+        },
+        {
+            "id":"2",
+            "titulo":"terciario",
+            "institucion":"ITJO-Jesus Obrero",
+            "inicio":"12-12-2010",
+            "fin":"02-04-2020",
+            "descripcion":"Tecnico superior en creacion de paredes"
+
+        }
+    ]
+
+}

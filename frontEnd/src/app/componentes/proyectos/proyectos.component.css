@@ -1,0 +1,6 @@
+section.projects-section{
+    border-left: 20px solid #526647;
+    background-color:transparent;
+    background-image: url(src/assets/img/bg-white-minimalist-foot.jpg);
+    background-size: cover;
+}

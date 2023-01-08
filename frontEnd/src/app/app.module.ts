@@ -9,6 +9,13 @@ import { IndexComponent } from './componentes/index/index.component';
 import { ErrorComponent } from './componentes/error/error.component';
 import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginModalComponent } from './modales/login-modal/login-modal.component';
+import { AboutModalComponent } from './modales/about-modal/about-modal.component';
+import { HeaderComponent } from './componentes/header/header.component';
+import { AcercaComponent } from './componentes/acerca/acerca.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +23,14 @@ import { LoginModalComponent } from './modales/login-modal/login-modal.component
     IndexComponent,
     ErrorComponent,
     NavbarComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    AboutModalComponent,
+    HeaderComponent,
+    AcercaComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    ProyectosComponent,
+    HabilidadesComponent
   ],
   imports: [
     BrowserModule,

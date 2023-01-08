@@ -1,0 +1,63 @@
+/**------Comienzan Estilos Banner------ **/
+section.banner-section{
+    background-color:transparent;
+    background-image: url(src/assets/img/bg-cloud.png);    
+    background-size: cover;
+}
+
+.name-text{
+    font-family: 'Poppins', sans-serif;
+    width:auto;
+    color: transparent;
+    text-align: center;
+    /* text-transform: uppercase; */
+    font-size: 10rem;
+    font-weight:bold;
+    background-image: url(src/assets/img/banner1.jpg);
+    background-size: cover;
+    background-clip: text;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+
+.name-text-2{
+    font-family: 'Poppins',sans-serif;
+    width: auto;
+    color: #696969;
+    text-align: center;
+}
+
+.border-main-text{
+    padding: 4rem 5rem;
+    border: 5px solid #696969;
+    
+}
+
+.btn-login:hover{
+    color:#fee2a8;
+}
+
+.btn-edit:hover{
+    background:#d586b0;
+}
+/**------Terminan Estilos Banner------ **/
+
+@media (max-width:575.98px){
+    .name-text{
+        font-size: 7rem;
+    }
+
+    .about-title{
+        text-align: center;
+        font-family: 'Poppins',sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+        color: #a4c4b5;
+    }
+    
+    .about-title span{
+        font-weight: lighter;
+        font-size: 3rem;
+    }
+
+}
