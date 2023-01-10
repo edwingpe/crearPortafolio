@@ -1,7 +1,7 @@
 <div class="modal fade" tabindex="-1" id="loginModal">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form #f="ngForm" [formGroup]="formLogin" (ngSubmit)="onEnviar($event)" (ngSubmit)="onLogin()" novalidate>
+            <form [formGroup]="formLogin" (ngSubmit)="onEnviar($event)">
                 <div class="modal-body m-0 p-0">
                     <div class="container-fluid">
                         <div class="modal-header">
@@ -18,8 +18,8 @@
                         <div class="row justify-content-center gy-3">
                             <div class="col-12 w-75">
                                 <div class="form-floating mb-3">
-                                    <input type="email" class="form-control" formControlName="email" id="nombreUsuario" name="nombreUsuario" [(ngModel)]="nombreUsuario" required placeholder="name@example.com" autocomplete="off">
-                                    <label for="nombreUsuario">Email address</label>
+                                    <input type="email" class="form-control" formControlName="email" id="floatingInput" placeholder="name@example.com" autocomplete="off">
+                                    <label for="floatingInput">Email address</label>
                                 </div>
                                 <!-- Comprobacion de validez. Usamos el Getter creado en el .ts -->
                                 <div class="error-container" *ngIf="emailControl.invalid && (emailControl.touched || emailControl.dirty)">
@@ -29,8 +29,8 @@
                             </div>
                             <div class="col-12 w-75">
                                 <div class="form-floating">
-                                    <input type="password" class="form-control" formControlName="password" id="password" placeholder="Password" autocomplete="off" [(ngModel)]="password" required>
-                                    <label for="password">Password</label>
+                                    <input type="password" class="form-control" formControlName="password" id="floatingPassword" placeholder="Password" autocomplete="off">
+                                    <label for="floatingPassword">Password</label>
                                 </div>
                                 <div class="error-container" *ngIf="passwordControl.invalid && (passwordControl.touched || passwordControl.dirty)">
                                     <p class="error-container" *ngIf="passwordControl.hasError('required')">El campo es obligatorio</p>                                    
