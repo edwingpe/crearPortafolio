@@ -1,23 +1,44 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { JwtDto } from '../model/jwt-dto';
-import { LoginUsuario } from '../model/login-usuario';
-import { NUsuario } from '../model/n-usuario';
+
+const AUTH_API = 'http://localhost:8080/api/auth';
+
+const httpOptions = {
+  headers: new HttpHeaders({'Content-Type': 'application/json'})
+};
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  authURL = "http://localhost:8080/api/auth/";
+  constructor(private http: HttpClient) { }
 
-  constructor(private httpClient: HttpClient) { }
-
-  public nuevo(nuevoUsuario: NUsuario):Observable<any>{
-    return this.httpClient.post<any>(this.authURL + "register", nuevoUsuario);
+  login(username: string, password: string): Observable<any>{
+    return this.http.post(
+      AUTH_API + 'signin',
+      {
+        username,
+        password,
+      },
+      httpOptions
+    );
   }
 
-  public login(LoginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authURL + "authenticate",LoginUsuario);
+  register(username: string, email: string, password: string): Observable<any>{
+    return this.http.post(
+      AUTH_API + 'signup',
+      {
+        username,
+        email,
+        password,
+      },
+      httpOptions
+    );
+  }
+
+  logout(): Observable<any> {
+    return this.http.post(AUTH_API + 'signout',{ },httpOptions);
   }
 }

@@ -4,6 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { httpInterceptorProviders } from './helpers/http.interceptor';
+
 import { AppComponent } from './app.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { ErrorComponent } from './componentes/error/error.component';
@@ -16,6 +18,12 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+
+import { LoginComponent } from './componentes/login/login.component';
+import { RegistroComponent } from './componentes/registro/registro.component';
+import { ProfileComponent } from './componentes/profile/profile.component';
+import { BoardAdminComponent } from './componentes/board-admin/board-admin.component';
+import { BoardUserComponent } from './componentes/board-user/board-user.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +38,21 @@ import { HabilidadesComponent } from './componentes/habilidades/habilidades.comp
     ExperienciaComponent,
     EducacionComponent,
     ProyectosComponent,
-    HabilidadesComponent
+    HabilidadesComponent,
+    LoginComponent,
+    RegistroComponent,
+    ProfileComponent,
+    BoardAdminComponent,
+    BoardUserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     FormsModule, ReactiveFormsModule,
+    
   ],
-  providers: [],
+  providers: [httpInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
