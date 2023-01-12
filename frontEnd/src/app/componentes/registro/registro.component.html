@@ -1,1 +1,134 @@
-<p>registro works!</p>
+<section class="vh-100" style="background-color: #eee">
+  <div class="container h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-lg-12 col-xl-11">
+        <div class="card text-black" style="border-radius: 25px">
+          <div class="card-body p-md-5">
+            <div class="row justify-content-center">
+              <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+                <p class="register-title text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registro</p>
+
+                <form
+                  *ngIf="!isSuccessful"
+                  name="form"
+                  (ngSubmit)="f.form.valid && onSubmit()"
+                  #f="ngForm"
+                  novalidate
+                  class="mx-1 mx-md-4"
+                >
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-group form-outline flex-fill mb-0">
+                      <input
+                        class="form-control"
+                        type="text"
+                        name="username"
+                        [(ngModel)]="form.username"
+                        required
+                        minlength="3"
+                        maxlength="20"
+                        #username="ngModel"
+                        [ngClass]="{
+                          'is-invalid': f.submitted && username.errors
+                        }"
+                      />
+                      <label class="form-label register-label" for="username"
+                        >nombre</label
+                      >
+                      <div
+                        class="error-feedback"
+                        *ngIf="username.errors && f.submitted"
+                      >
+                        <div *ngIf="username.errors['required']">
+                          nombre es necesario.
+                        </div>
+                        <div *ngIf="username.errors['minLength']">
+                          Mínimo 3 caracteres.
+                        </div>
+                        <div *ngIf="username.errors['maxLength']">
+                          Máximo 20 caracteres.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form-group form-outline flex-fill mb-0">
+                      <input
+                        class="form-control"
+                        type="email"
+                        name="email"
+                        [(ngModel)]="form.email"
+                        required
+                        email
+                        #email="ngModel"
+                        [ngClass]="{
+                          'is-invalid': f.submitted && email.errors
+                        }"
+                      />
+                      <label class="form-label register-label" for="email"
+                        >email</label
+                      >
+                      <div
+                        class="error-feedback"
+                        *ngIf="email.errors && f.submitted"
+                      >
+                        <div *ngIf="email.errors['required']">
+                          email es necesario
+                        </div>
+                        <div *ngIf="email.errors['email']">
+                          email debe ser un email valido.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex flex-row align-items-center mb-4">
+                    <div class="form group form-outline flex-fill mb-0">
+                      <input
+                        type="password"
+                        name="password"
+                        class="form-control"
+                        [(ngModel)]="form.password"
+                        required
+                        minlength="6"
+                        #password="ngModel"
+                        [ngClass]="{'is-invalid': password.errors && f.submitted}"/>
+                      <label class="form-label register-label" for="password">contraseña</label>
+                      <div class="error-feedback" *ngIf="password.errors && f.submitted">
+                        <div *ngIf="password.errors['required']">contrasena necesaria</div>
+                        <div *ngIf="password.errors['minLength']">contrasena minima de 6 caractares</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                    <div class="form-group">
+                      <button class="btn btn-danger btn-lg">Aceptar</button>
+                    </div>
+                  </div>
+                  <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                    Signup failed!<br />{{ errorMessage }}
+                  </div>
+                </form>
+              </div>
+
+              <div class="alert alert-success" *ngIf="isSuccessful">
+                Your registration is successful!
+              </div>
+
+              <div
+                class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2"
+              >
+                <img
+                  src="/assets/img/register1.jpg"
+                  class="img-fluid"
+                  alt="Sample image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

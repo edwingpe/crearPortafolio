@@ -1,0 +1,23 @@
+section.experience-section{
+    border-left: 20px solid #ffe4a9;
+}
+
+.register-info{
+    font-family: 'Poppins', sans-serif;
+    font-size: 2em;
+    color: #808080;
+}
+
+.register-label{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    color: #808080;
+}
+
+
+
+.register-title{
+    font-family: 'Poppins', sans-serif;
+    font-size: 3em;
+    color: #696969;
+}
