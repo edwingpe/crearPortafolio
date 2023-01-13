@@ -90,13 +90,13 @@
                         class="form-control"
                         [(ngModel)]="form.password"
                         required
-                        minlength="6"
+                        minlength="4"
                         #password="ngModel"
                         [ngClass]="{'is-invalid': password.errors && f.submitted}"/>
                       <label class="form-label register-label" for="password">contraseña</label>
                       <div class="error-feedback" *ngIf="password.errors && f.submitted">
                         <div *ngIf="password.errors['required']">contrasena necesaria</div>
-                        <div *ngIf="password.errors['minLength']">contrasena minima de 6 caractares</div>
+                        <div *ngIf="password.errors['minLength']">contrasena minima de 4 caractares</div>
                       </div>
                     </div>
                   </div>

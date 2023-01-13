@@ -32,6 +32,7 @@ public class JwtUtils {
 
   @Value("${portfolio.app.jwtCookieName}")
   private String jwtCookie;
+  
 
   public String getJwtFromCookies(HttpServletRequest request) {
     Cookie cookie = WebUtils.getCookie(request, jwtCookie);

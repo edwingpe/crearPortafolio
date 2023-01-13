@@ -23,7 +23,7 @@ export class RegistroComponent implements OnInit{
     }
   
   onSubmit(): void{
-    const { username, email, password } = this.form;
+    const { username, email, password, role } = this.form;
 
     this.authService.register(username, email, password).subscribe({
       next: data => {
