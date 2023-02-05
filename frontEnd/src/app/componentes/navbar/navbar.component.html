@@ -1,5 +1,78 @@
-<nav class="navbar navbar-expand border-1 border-bottom border-dark  ">
-        <div class="container bg-primary">
+<nav class="navbar sticky-top d-flex justify-content-center shadow-sm py-3 bg-white">
+  <div class="container">
+    <div class="logo-contain me-auto">
+      <a class="navbar-brand" href="#"><img src="/assets/img/ap-logo black.png" alt="logo" height="45"></a>
+    </div>
+
+    <div class="nav-icons-container d-inline-flex align-items-center">
+      <ul class="navbar-nav flex-row" routerLink="active">
+        <li class="nav-item mx-2">
+          <a class="nav-link item-nav" routerLink="/index">
+            <span class="nav-item">home</span>
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="showAdminBoard">
+          <a href="/admin" class="nav-link item-nav" routerLink="/admin">dashboard</a>
+        </li>
+      </ul>
+
+      
+      <ul class="navbar-nav" routerLink="active" *ngIf="!isLoggedIn">
+        <li class="nav-item mx-2">
+          <a class="nav-link item-nav" role="button" routerLink="/login"><span class="nav-item">logIn</span></a>
+        </li>
+      </ul>
+      
+      
+
+      <ul class="navbar-nav ml-auto flex-row" *ngIf="isLoggedIn">
+        <li class="nav-item mx-2">
+          <a href="/profile" class="nav-link item-nav" role="button" routerLink="profile"><span>{{username}}</span>
+          </a>
+        </li>
+        <li class="nav-item mx-2">
+          <a href="/index" class="nav-link item-nav" role="button" routerLink="index" (click)="logout()"><span>logout</span>
+          </a>
+        </li>
+      </ul>
+      
+      <!-- 
+        ##
+        ##
+        Lista de Opciones portfolio.
+       --> 
+       <div class="dropdown mx-1">
+        <button class="btn btn-dark btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          portafolio
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark">
+          <li><a class="dropdown-item" routerLink="/contenido#skills">Acerca de</a></li>
+          <li><a tabindex="0" (click)="navigateToSection('experience')" class="dropdown-item">Experiencia</a></li>
+          <li><a class="dropdown-item" href="#">Educacion</a></li>
+          <li><a class="dropdown-item" href="#">Skills</a></li>
+          <li><a class="dropdown-item" href="#">Proyectos</a></li>
+        </ul>
+      </div>
+      
+       <!-- ##
+        ##
+       -->
+
+      <ul class="navbar-nav mx-auto flex-row">
+        <li class="nav-item mx-1 nav-link">
+          <a href=""><i class="fa-brands fa-github fa-2x navbar-icon"></i></a>
+        </li>
+        <li class="nav-item nav-link">
+          <a href=""><i class="fa-brands fa-linkedin-in fa-2x navbar-icon"></i></a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+<!-- <nav class="navbar sticky-top navbar-expand justify-content-center">
+        <div class="container">
             <a class="navbar-brand" href="#"><img src="/assets/img/ap-logo black.png" alt="logo" height="45"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -7,10 +80,11 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto" routerLinkActive="active">
                     <li class="nav-item">
-                      <a href="/home" class="nav-link justify-content-end" routerLink="index"
-                        >Home
+                      <a href="/home" class="btn btn-outline-dark" role="button" routerLink="index">
+                        <i class="fa-solid fa-house fa-2x"></i>
                       </a>
                     </li>
+                    
                     <li class="nav-item" *ngIf="showAdminBoard">
                       <a href="/admin" class="nav-link" routerLink="admin">Admin Board</a>
                     </li>
@@ -26,10 +100,10 @@
                 
                   <ul class="navbar-nav ml-auto justify-content-end" *ngIf="!isLoggedIn">
                     <li class="nav-item">
-                      <a href="/register" class="nav-link" routerLink="registro">Sign Up</a>
+                      <a href="/register" class="nav-link" routerLink="registro"><i class="fa-solid fa-right-to-bracket"></i>Sign Up</a>
                     </li>
                     <li class="nav-item">
-                      <a href="/login" class="nav-link" routerLink="login">Login</a>
+                      <a href="/login" class="btn btn-outline-dark" role="button" routerLink="login"><i class="fa-solid fa-right-to-bracket fa-2x"></i></a>
                     </li>
                   </ul>
                 
@@ -47,9 +121,8 @@
                   </ul>
             </div>
         </div>
-</nav>
+</nav> -->
             
-
 <!-- Botones redes start-->
 <!-- <li class="nav-item"><a class="nav-link link-light" href="http://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin-in fa-2x"></i></a></li>
                     <li class="nav-item me-5"><a class="nav-link link-light" href="http://www.github.com" target="_blank"><i class="fa-brands fa-github-alt fa-2x" ></i></a></li> -->

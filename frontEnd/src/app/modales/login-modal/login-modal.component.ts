@@ -18,7 +18,7 @@ export class LoginModalComponent {
   roles: string[] = [];
   errMsj!: string;
 
-  
+
   constructor(private formBuilder: FormBuilder){
 
     this.formLogin = this.formBuilder.group({

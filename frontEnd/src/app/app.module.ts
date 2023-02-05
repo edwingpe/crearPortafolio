@@ -18,12 +18,14 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { ContenidoComponent } from './componentes/contenido/contenido.component';
 
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistroComponent } from './componentes/registro/registro.component';
 import { ProfileComponent } from './componentes/profile/profile.component';
 import { BoardAdminComponent } from './componentes/board-admin/board-admin.component';
 import { BoardUserComponent } from './componentes/board-user/board-user.component';
+
 
 @NgModule({
   declarations: [
@@ -43,7 +45,8 @@ import { BoardUserComponent } from './componentes/board-user/board-user.componen
     RegistroComponent,
     ProfileComponent,
     BoardAdminComponent,
-    BoardUserComponent
+    BoardUserComponent,
+    ContenidoComponent
   ],
   imports: [
     BrowserModule,

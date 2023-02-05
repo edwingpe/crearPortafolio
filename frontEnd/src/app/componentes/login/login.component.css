@@ -1,19 +1,13 @@
-.register-info{
-    font-family: 'Poppins', sans-serif;
-    font-size: 2em;
-    color: #808080;
+.main-title{
+    font-family: var(--ff-heading);
+    font-size: var(--fs-lg);
 }
 
-.register-label{
-    font-family: 'Poppins', sans-serif;
-    font-size: 1em;
-    color: #808080;
+.sub-title{
+    font-size: var(--fs-600);
 }
 
-
-
-.register-title{
-    font-family: 'Poppins', sans-serif;
-    font-size: 3em;
-    color: #696969;
+#login-section{
+    height: 87vh;
+    background-color: var(--platinum);
 }

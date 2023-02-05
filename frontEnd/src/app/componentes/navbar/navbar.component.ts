@@ -55,4 +55,9 @@ export class NavbarComponent {
       }
     });
   }
+
+  navigateToSection(section: string) {
+    window.location.hash = '';
+    window.location.hash = section;
+  }
 }

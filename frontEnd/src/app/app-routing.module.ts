@@ -7,13 +7,15 @@ import { IndexComponent } from './componentes/index/index.component';
 import { ProfileComponent } from './componentes/profile/profile.component';
 import { BoardAdminComponent } from './componentes/board-admin/board-admin.component';
 import { BoardUserComponent } from './componentes/board-user/board-user.component';
+import { ContenidoComponent } from './componentes/contenido/contenido.component';
 
 import { ErrorComponent } from './componentes/error/error.component';
 
 
 const routes: Routes = [
-  {path:'index',component: IndexComponent},
-  {path: 'login', component: LoginComponent},
+  { path: 'index',component: IndexComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'contenido', component: ContenidoComponent},
   { path: 'registro', component: RegistroComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'user', component: BoardUserComponent },

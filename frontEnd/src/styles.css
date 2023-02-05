@@ -1,4 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;400&family=Roboto:wght@100;400;700&display=swap');
+
+
+:root {
+    --russian-violet: #0f0d35ff;
+    --platinum: #eaebe7ff;
+    --y-in-mn-blue: #204fa1ff;
+    --mellow-apricot: #fab464ff;
+
+    --ff-heading:'Roboto', sans-serif;
+    --ff-body:'Heebo', sans-serif;
+
+    --fs-xl: clamp(3.5rem, 10vw + 1rem, 10rem);
+    --fs-lg: clamp(2.5rem, 5vw + 1rem, 5rem);
+    --fs-600: clamp(0.5rem, 2vw + 0.5rem, 2rem);
+    --fs-400: clamp(0.3rem, 1vw + 0.5rem, 1rem);
+    }
+
 
 .btn-edit{
     width: 35px;
@@ -16,6 +33,7 @@
     box-sizing: border-box;
     margin-top: 0;
     padding: 0;
+    /* background-color: var(--platinum); */
 }
 
 html {
