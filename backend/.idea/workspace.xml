@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bcb04999-8c4c-4ece-bb7c-a584c71ca00d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/componentes/contenido/contenido.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/componentes/contenido/contenido.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/com/portfolio/backend/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/com/portfolio/backend/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/componentes/acerca/acerca.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/componentes/acerca/acerca.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/componentes/acerca/acerca.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/componentes/acerca/acerca.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/componentes/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/componentes/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/componentes/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/componentes/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontEnd/src/app/model/n-usuario.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontEnd/src/app/model/n-usuario.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
