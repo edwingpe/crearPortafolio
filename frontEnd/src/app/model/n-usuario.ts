@@ -4,5 +4,4 @@ export class NUsuario {
     email!: string;
     password!: string;
     authorities!: string[];
-
 }
